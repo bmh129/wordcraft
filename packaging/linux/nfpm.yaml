@@ -24,7 +24,8 @@ description: |-
 
 # The binaries link only glibc and libgcc_s directly. Windowing (X11/Wayland, xkbcommon) and the
 # GPU (Vulkan, EGL/GL) are loaded at runtime, so they are dependencies/recommendations here
-# rather than ELF NEEDED entries.
+# rather than ELF NEEDED entries. Without the X11 libraries the app runs on native Wayland
+# (no file drag-and-drop there with winit 0.30), so they are recommendations.
 overrides:
   deb:
     depends:
@@ -48,6 +49,7 @@ overrides:
     recommends:
       - libwayland-client
       - libX11
+      - libX11-xcb
       - libXcursor
       - libXi
       - libXrandr
