@@ -288,6 +288,11 @@ and libXi):
 WORDCRAFT_X11=1 wordcraft
 ```
 
+Where the compositor draws no window frames (GNOME), the title bar carries GNOME-style minimize,
+maximize and close buttons in the order GNOME's button layout setting names, and the window's
+edges resize it. File › Options › General › Use system title bar gives the window a basic frame
+instead; `WORDCRAFT_TITLEBAR=app` or `=system` overrides the detection.
+
 **Arch Linux (AUR).** Community members maintain three AUR packages; the project doesn't publish
 to the AUR itself. Install one of them:
 | Package | What it installs | Choose it when |

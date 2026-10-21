@@ -2688,3 +2688,9 @@
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Въведете размер в произволна единица, например 5 cm или 300 px. Другата страна се променя съответно, така че картината запазва пропорциите си.
 
 	Import…	Импортиране…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Минимизиране
+	Maximize	Максимизиране
+	Restore	Възстановяване
+	Use system title bar	Използване на системната заглавна лента
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Показва обикновена заглавна лента с бутоните на прозореца над тази на WordCraft. GNOME не рисува заглавни ленти за приложенията, затова тази не следва темата му.

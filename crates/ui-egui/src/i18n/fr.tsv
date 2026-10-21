@@ -2700,3 +2700,9 @@ template	Letter	Lettre
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Tapez une taille dans n'importe quelle unité, par exemple 5 cm ou 300 px. L'autre côté suit, et l'image garde ses proportions.
 
 	Import…	Importer…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Réduire
+	Maximize	Agrandir
+	Restore	Restaurer
+	Use system title bar	Utiliser la barre de titre du système
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Affiche une barre de titre simple avec les boutons de la fenêtre au-dessus de celle de WordCraft. GNOME ne dessine pas de barre de titre pour les applications, celle-ci ne suit donc pas son thème.

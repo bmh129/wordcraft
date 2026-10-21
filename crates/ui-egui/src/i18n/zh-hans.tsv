@@ -2300,3 +2300,9 @@
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	可用任意单位输入大小，例如 5 cm 或 300 px。另一边随之调整，图片保持原有比例。
 
 	Import…	导入…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	最小化
+	Maximize	最大化
+	Restore	还原
+	Use system title bar	使用系统标题栏
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	在 WordCraft 自己的标题栏上方显示带窗口按钮的基本标题栏。GNOME 不为应用绘制标题栏，因此此标题栏不跟随其主题。

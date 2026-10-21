@@ -2697,3 +2697,9 @@ preview	Title	Пример
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Введите размер в любых единицах, например 5 cm или 300 px. Другая сторона изменится вместе с ней, и рисунок сохранит пропорции.
 
 	Import…	Импорт…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Свернуть
+	Maximize	Развернуть
+	Restore	Восстановить
+	Use system title bar	Использовать системный заголовок окна
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Показывает простой заголовок окна с кнопками над заголовком WordCraft. GNOME не рисует заголовки для приложений, поэтому этот не следует его теме.

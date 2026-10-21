@@ -2714,3 +2714,9 @@ preview	Title	Titel
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Skriv en storlek i valfri enhet, till exempel 5 cm eller 300 px. Den andra sidan följer med, så att bilden behåller sina proportioner.
 
 	Import…	Importera…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Minimera
+	Maximize	Maximera
+	Restore	Återställ
+	Use system title bar	Använd systemets namnlist
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Visar en enkel namnlist med fönsterknapparna ovanför WordCrafts egen. GNOME ritar inga namnlister åt appar, så den här följer inte dess tema.

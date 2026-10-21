@@ -2704,3 +2704,9 @@ preview	Title	Tytuł
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Wpisz rozmiar w dowolnej jednostce, np. 5 cm lub 300 px. Druga strona dopasuje się, więc obraz zachowa proporcje.
 
 	Import…	Importuj…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Minimalizuj
+	Maximize	Maksymalizuj
+	Restore	Przywróć
+	Use system title bar	Użyj systemowego paska tytułu
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Pokazuje prosty pasek tytułu z przyciskami okna nad paskiem WordCrafta. GNOME nie rysuje pasków tytułu dla aplikacji, więc ten nie stosuje się do jego motywu.

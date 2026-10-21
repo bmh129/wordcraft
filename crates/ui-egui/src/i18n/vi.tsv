@@ -2739,3 +2739,9 @@ template	Letter	Thư
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Nhập kích thước theo đơn vị bất kỳ, ví dụ 5 cm hoặc 300 px. Cạnh còn lại thay đổi theo, nên ảnh giữ nguyên tỷ lệ.
 
 	Import…	Nhập…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Thu nhỏ
+	Maximize	Phóng to
+	Restore	Khôi phục
+	Use system title bar	Dùng thanh tiêu đề của hệ thống
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Hiện một thanh tiêu đề đơn giản có các nút cửa sổ phía trên thanh tiêu đề của WordCraft. GNOME không vẽ thanh tiêu đề cho ứng dụng, nên thanh này không theo chủ đề của nó.
