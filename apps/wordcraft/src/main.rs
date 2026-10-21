@@ -276,7 +276,7 @@ fn x11_libraries_load() -> bool {
     let missing = [Xlib::open().err(), Xcursor::open().err(), Xlib_xcb::open().err(), XInput2::open().err()];
     let missing: Vec<String> = missing.into_iter().flatten().map(|e| e.to_string()).collect();
     if !missing.is_empty() {
-        log::warn!("X11 libraries missing, using the native Wayland backend: {}", missing.join("; "));
+        log::warn!("WORDCRAFT_X11: X11 libraries missing, using the native Wayland backend: {}", missing.join("; "));
     }
     missing.is_empty()
 }
@@ -416,11 +416,11 @@ fn main() -> eframe::Result {
         options.viewport = window.apply(options.viewport);
     }
     #[cfg(all(unix, not(target_os = "macos")))]
-    // winit has no file drag-and-drop on Wayland (only on X11), so dropping files from the file
-    // manager showed a "no" cursor. Run through XWayland when it's there; WORDCRAFT_WAYLAND=1
-    // keeps the native Wayland backend. The X11 libraries are only recommended by the packages,
-    // so without them a Wayland desktop gets the native backend instead of a failed start.
-    if std::env::var_os("DISPLAY").is_some() && std::env::var_os("WORDCRAFT_WAYLAND").is_none() && x11_libraries_load() {
+    // winit runs natively on a Wayland desktop: sharp at fractional scales, with working input
+    // methods. It has no file drag-and-drop there (only on X11), so WORDCRAFT_X11=1 runs through
+    // XWayland instead for dropping files from the file manager (#220). The X11 libraries are only
+    // recommended by the packages, so without them the setting is ignored rather than failing.
+    if std::env::var_os("DISPLAY").is_some() && std::env::var_os("WORDCRAFT_X11").is_some() && x11_libraries_load() {
         options.event_loop_builder = Some(Box::new(|b| {
             use winit::platform::x11::EventLoopBuilderExtX11;
             b.with_x11();
