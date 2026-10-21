@@ -5,7 +5,7 @@ use serde_json::json;
 use wordcraft_doc::StoryRef;
 
 use crate::theme::{Tokens, TypeRung, medium, paint_text, regular, semibold, text_width};
-use crate::{WordApp, icons};
+use crate::{WordApp, icons, window_controls};
 
 /// The Quick Access Toolbar's button for command `id`.
 pub(crate) fn qat_button_id(id: &str) -> egui::Id {
@@ -277,8 +277,15 @@ pub fn title_bar(app: &mut WordApp, ui: &mut Ui) {
             }
             let mut qat_end = full.min.x;
             let mut right_start = full.max.x;
+            // GNOME on Wayland: the title bar is the header bar, with the window buttons at its
+            // ends (`window_controls`), in the desktop's order; hidden in full screen.
+            let controls = app.shown_window_controls(ui.ctx()).unwrap_or_else(window_controls::Layout::none);
             ui.horizontal_centered(|ui| {
                 ui.spacing_mut().item_spacing = vec2(2.0, 0.0);
+                if !controls.left.is_empty() {
+                    ui.scope(|ui| window_controls::buttons(ui, &controls.left));
+                    ui.add_space(window_controls::SIDE_GAP);
+                }
                 // AutoSave switch: greyed out, with the reason as its tooltip, when AutoSave can't
                 // cover the document (#196, #176); clicking it then offers Save As where that helps.
                 let block = app.autosave_block();
@@ -316,6 +323,15 @@ pub fn title_bar(app: &mut WordApp, ui: &mut Ui) {
                 }
                 qat_end = ui.min_rect().max.x;
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+                    if !controls.right.is_empty() {
+                        // Laid out left to right inside the right-to-left run, so they read in the
+                        // desktop's order.
+                        let size = vec2(window_controls::width(&controls.right), window_controls::BUTTON);
+                        ui.allocate_ui_with_layout(size, egui::Layout::left_to_right(egui::Align::Center), |ui| {
+                            window_controls::buttons(ui, &controls.right);
+                        });
+                        ui.add_space(window_controls::SIDE_GAP);
+                    }
                     // Account / community.
                     let (r, resp) = ui.allocate_exact_size(vec2(control_h, control_h), Sense::click());
                     ui.painter().circle_filled(r.center(), control_h / 2.0 - 1.0, t.accent);

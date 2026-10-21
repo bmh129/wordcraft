@@ -2302,3 +2302,9 @@
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Унесите величину у било којој јединици, на пример 5 cm или 300 px. Друга страна се прилагођава, па слика задржава своје пропорције.
 
 	Import…	Увези…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Умањи
+	Maximize	Увећај
+	Restore	Врати
+	Use system title bar	Користи системску траку наслова
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Приказује једноставну траку наслова са дугмадима прозора изнад WordCraft-ове. GNOME не црта траке наслова за апликације, па ова не прати његову тему.

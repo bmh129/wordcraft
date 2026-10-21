@@ -2287,3 +2287,9 @@
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Geben Sie eine Größe in einer beliebigen Einheit ein, z. B. 5 cm oder 300 px. Die andere Seite passt sich an, sodass das Bild seine Proportionen behält.
 
 	Import…	Importieren…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Minimieren
+	Maximize	Maximieren
+	Restore	Wiederherstellen
+	Use system title bar	System-Titelleiste verwenden
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Eine einfache Titelleiste für die Fensterknöpfe über der von WordCraft anzeigen. GNOME zeichnet für Apps keine Titelleisten, daher folgt diese nicht seinem Design.

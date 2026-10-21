@@ -2654,3 +2654,9 @@ preview	Title	Título
 	Type a size in any unit, such as 5 cm or 300 px. The other side follows, so the picture keeps its proportions.	Escribe un tamaño en cualquier unidad, como 5 cm o 300 px. El otro lado se ajusta, así que la imagen conserva sus proporciones.
 
 	Import…	Importar…
+# Window buttons where the app draws the window frame (GNOME on Wayland).
+	Minimize	Minimizar
+	Maximize	Maximizar
+	Restore	Restaurar
+	Use system title bar	Usar la barra de título del sistema
+	Show a basic title bar for the window buttons above WordCraft's own. GNOME doesn't draw title bars for apps, so this one doesn't follow its theme.	Muestra una barra de título básica con los botones de la ventana encima de la de WordCraft. GNOME no dibuja barras de título para las aplicaciones, así que esta no sigue su tema.

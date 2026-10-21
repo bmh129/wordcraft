@@ -63,6 +63,9 @@ zbus = { version = "5", default-features = false, features = ["async-io", "block
 # types that arboard doesn't read, and the formats offered. Already in the build through arboard's
 # `wayland-data-control` feature, at this version.
 wl-clipboard-rs = "0.9"
+# Asks the Wayland compositor whether it draws window frames (`decorations.rs`). Already in the
+# build through winit, at this version.
+wayland-client = "0.31"
 
 [target.'cfg(target_os = "windows")'.dependencies]
 # The upstream default-apps button opens Windows Settings; printing uses craft-print instead.
