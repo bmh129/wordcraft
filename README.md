@@ -281,8 +281,8 @@ RISC-V (riscv64): `wordcraft-<ver>-linux-riscv64.tar.gz`, a tarball cross-compil
 **Wayland:** on a Wayland desktop the app uses the native Wayland backend, which is sharp at
 fractional scales and works with input methods. winit (the windowing library) supports dragging
 files into the window only on X11, so to drop files from the file manager, run the app through
-XWayland with `WORDCRAFT_X11=1` (this needs the X11 libraries: libX11, libX11-xcb, libXcursor
-and libXi):
+XWayland with `WORDCRAFT_X11=1` (this needs the X11 libraries: libX11, libX11-xcb, libXcursor,
+libXi and libxkbcommon-x11):
 
 ```sh
 WORDCRAFT_X11=1 wordcraft
