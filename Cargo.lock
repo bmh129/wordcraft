@@ -6678,6 +6678,7 @@ dependencies = [
  "wordcraft-proof",
  "wordcraft-ui-egui",
  "x11-dl",
+ "xkbcommon-dl",
  "zbus",
 ]
 
