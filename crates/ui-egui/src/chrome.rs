@@ -269,7 +269,7 @@ pub fn title_bar(app: &mut WordApp, ui: &mut Ui) {
             // Drag the window by the title bar (integrated title bar on macOS).
             let drag = ui.interact(full, ui.id().with("title_drag"), Sense::click_and_drag());
             if drag.drag_started() {
-                ui.ctx().send_viewport_cmd(egui::ViewportCommand::StartDrag);
+                window_controls::desktop_grab(ui.ctx(), egui::ViewportCommand::StartDrag);
             }
             if drag.double_clicked() {
                 let max = ui.ctx().input(|i| i.viewport().maximized.unwrap_or(false));

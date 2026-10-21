@@ -2207,9 +2207,13 @@ impl WordApp {
         }
     }
 
-    /// Read a Control-click as the right-click on macOS, then inject synthetic input events from
-    /// the control channel (one pointer event per frame).
+    /// Give back a button release the desktop kept during a window move or resize, read a
+    /// Control-click as the right-click on macOS, then inject synthetic input events from the
+    /// control channel (one pointer event per frame).
     pub fn raw_input_hook(&mut self, raw: &mut egui::RawInput) {
+        if let Some(ctx) = &self.ctx {
+            window_controls::release_after_desktop_grab(ctx, raw);
+        }
         if cfg!(target_os = "macos") {
             control_click_as_secondary(&mut raw.events, &mut self.control_click);
         }
